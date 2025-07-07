@@ -41,31 +41,54 @@ const Carousel = ({ projects }) => {
                       {project.title}
                     </h3>
                     <div className="flex gap-x-2 justify-center items-start">
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        className="font-bold text-lg text-[#fefffa] cursor-pointer px-4 py-2 rounded-md bg-[#ea5147] hover:bg-[#323954]"
-                      >
-                        live
-                      </a>
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        className="font-bold text-lg text-[#fefffa] cursor-pointer px-4 py-2 rounded-md bg-[#ea5147] hover:bg-[#323954]"
-                      >
-                        code
-                      </a>
+                      {project?.live ? (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          className="font-bold text-lg text-[#fefffa] cursor-pointer px-4 py-2 rounded-md bg-[#ea5147] hover:bg-[#323954]"
+                        >
+                          live
+                        </a>
+                      ) : (
+                        <span
+                          className="font-bold text-lg text-gray-400 cursor-not-allowed px-4 py-2 rounded-md bg-gray-300"
+                          title="Private respository"
+                        >
+                          live
+                        </span>
+                      )}
+
+                      {project?.url ? (
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          className="font-bold text-lg text-[#fefffa] cursor-pointer px-4 py-2 rounded-md bg-[#ea5147] hover:bg-[#323954]"
+                        >
+                          code
+                        </a>
+                      ) : (
+                        <span
+                          className="font-bold text-lg text-gray-400 cursor-not-allowed px-4 py-2 rounded-md bg-gray-300"
+                          title="live link not available"
+                        >
+                          code
+                        </span>
+                      )}
                     </div>
                   </div>
+
                   <img
                     src={project.graphicImage}
                     alt={project.title}
                     className="w-full mx-auto h-96 border-0 rounded-lg mt-4"
                   />
-                  <p className="text-lg mt-4 p-4 text-wrap">
+                  <h3 className="text-base font-semibold mt-4 px-4">
+                    {project.type}
+                  </h3>
+                  <p className="text-lg px-4  text-wrap">
                     {project.description}
                   </p>
-                  <p className="text-sm mt-2 p-4">
+                  <p className="text-sm mt-2 px-4">
                     Tech Stake: {project.techStack}
                   </p>
                 </div>

@@ -2,76 +2,63 @@ export const projects = [
   {
     title: "CodeRespite: Refresh Your Tech Skills",
     description:
-      "Code Respite is your go-to destination for mastering full stack web development. Explore tutorials, projects, and insightful blogs on HTML, CSS, JavaScript, React, Node.js, and more.",
-    techStack: "React",
-    url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
+      "A learning platform Android app offering curated tutorials, quizzes, and flashcards on web technologies like HTML, CSS, JavaScript, React, and Node.js. Designed for learners who want to build strong foundations and test their knowledge interactively.",
+    techStack: "React Native, Expo, Firebase",
+    type: "Android App",
+    url: "",
     live: "https://play.google.com/store/apps/details?id=com.mindcraftlearning.coderespite",
-    graphicImage: "/assets/projects/coderespite.png"
-
-
-
+    graphicImage: "/assets/projects/coderespite.png",
   },
   {
     title: "Question Games: Get to Know Me",
     description:
-      "Code Respite is your go-to destination for mastering full stack web development. Explore tutorials, projects, and insightful blogs on HTML, CSS, JavaScript, React, Node.js, and more.",
-    techStack: "React",
-    url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
+      "A fun and engaging Android app featuring curated question sets for couples, friends, and families. Perfect for bonding, ice-breaking, and learning more about each other.",
+    techStack: "React Native, Expo, Firebase",
+    type: "Android App",
+    url: "",
     live: "https://play.google.com/store/apps/details?id=com.mindcraftlearning.questiongames",
-    graphicImage: "/assets/projects/questiongames.png"
-
+    graphicImage: "/assets/projects/questiongames.png",
   },
   {
-    title: "Spin the Wheel : Pick for me",
+    title: "Spin the Wheel: Pick for Me",
     description:
-      "Code Respite is your go-to destination for mastering full stack web development. Explore tutorials, projects, and insightful blogs on HTML, CSS, JavaScript, React, Node.js, and more.",
-    techStack: "React",
-    url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
+      "A category-based spinner Android app to help make fun decisions quickly. From food choices to truth-or-dare prompts, the app provides a playful solution to indecisiveness.",
+    techStack: "React Native, Expo",
+    type: "Android App",
+    url: "",
     live: "https://play.google.com/store/apps/details?id=com.mindcraftlearning.spinthewheel",
-    graphicImage: "/assets/projects/spinthewheel.png"
-
+    graphicImage: "/assets/projects/spinthewheel.png",
   },
   {
     title: "Trivia Quest AI: Fun Quiz Game",
     description:
-      "Code Respite is your go-to destination for mastering full stack web development. Explore tutorials, projects, and insightful blogs on HTML, CSS, JavaScript, React, Node.js, and more.",
-    techStack: "React",
-    url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
+      "An Android quiz game app with AI-curated questions, user-generated quizzes, leaderboards, and real-time scoring. Built to make learning fun through interactive trivia.",
+    techStack: "React Native, Firebase, OpenAI (planned), Expo",
+    type: "Android App",
+    url: "",
     live: "https://play.google.com/store/apps/details?id=com.coderespite.triviaquestai",
-    graphicImage: "/assets/projects/trivia.png"
-
+    graphicImage: "/assets/projects/trivia.png",
   },
-
   {
     title: "NetflixGPT",
     description:
-      "A comprehensive movie searching and browsing application with features like user authentication, movie search using TMDB API, movie recommendations (OpenAI API integration), and more.",
-    techStack: "React, Redux, TMDB API, OpenAI API, Firebase Authentication",
-    url: "https://github.com/amit265/React-Projects/tree/main/netflixgpt",
-    live: "https://coderespite.com/projects/react/netflixgpt",
-    graphicImage: "/assets/projects/netflixgpt.png"
+      "A smart movie recommendation web app using TMDB for movie data and OpenAI for personalized suggestions. Includes Firebase Auth, search functionality, trending sections, and Redux for state management.",
+    techStack: "React, Tailwind CSS, Firebase, TMDB API, OpenAI, Redux",
+    type: "Web App",
+    url: "https://github.com/amit265/netflixgpt.git",
+    live: "https://netflixgpt.coderespite.com",
+    graphicImage: "/assets/projects/netflixgpt.png",
   },
   {
     title: "Swiggy App",
     description:
-      "An app where you can order foods. Data is fetched through the Swiggy API, and Redux is used to store items in the cart. It also uses custom hooks for state management.",
+      "A Swiggy-like food ordering web app featuring restaurant listings, menu browsing, and cart functionality. Redux is used for global state and API integration handles restaurant data.",
     techStack: "React, Swiggy API, Redux, Custom Hooks",
-    url: "https://github.com/amit265/React-Projects/tree/main/swiggy-app",
-    live: "https://coderespite.com/projects/react/swiggy/",
-    graphicImage: "/assets/projects/swiggy.png"
-
+    type: "Web App",
+    url: "https://github.com/amit265/swiggy.git",
+    live: "https://swiggy.coderespite.com",
+    graphicImage: "/assets/projects/swiggy.png",
   },
-  {
-    title: "Blog App",
-    description:
-      "A blog application that fetches all blog posts through an API. It categorically organizes the posts and provides options for more pages. CRUD operations are not included.",
-    techStack: "React, Blog API",
-    url: "https://github.com/amit265/React-Projects/tree/main/blog-app",
-    live: "https://coderespite.com/projects/react/blog-app/",
-    graphicImage: "/assets/projects/netflixgpt.png"
-
-  },
-  
 ];
 
 export const certificates = [
@@ -101,33 +88,39 @@ export const skills = [
   {
     stack: "Frontend",
     type: [
-      { lang: "React", strength: "75" },
-      { lang: "Tailwind", strength: "80" },
-      { lang: "JavaScript", strength: "60" },
+      { lang: "React", strength: "80" },
+      { lang: "Tailwind CSS", strength: "85" },
+      { lang: "JavaScript (ES6+)", strength: "75" },
+      { lang: "TypeScript (Learning)", strength: "50" },
     ],
   },
   {
     stack: "Backend",
     type: [
-      { lang: "Node.js", strength: "60" },
+      { lang: "Node.js", strength: "70" },
+      { lang: "Express.js", strength: "70" },
       { lang: "MongoDB", strength: "75" },
-      { lang: "Express", strength: "70" },
+      { lang: "REST APIs", strength: "85" },
     ],
   },
   {
-    stack: "Mobile",
+    stack: "Mobile Development",
     type: [
-      { lang: "Android Studio", strength: "60" },
-      { lang: "React Native", strength: "50" },
-      { lang: "Java", strength: "40" },
+      { lang: "React Native", strength: "70" },
+      { lang: "Android (Java + XML)", strength: "60" },
+      { lang: "Expo", strength: "75" },
+      { lang: "Play Store Deployment", strength: "80" },
+
     ],
   },
   {
-    stack: "Other",
+    stack: "Dev Tools & Other",
     type: [
-      { lang: "Git", strength: "85" },
-      { lang: "Docker", strength: "40" },
-      { lang: "Firebase", strength: "40" },
+      { lang: "Git & GitHub", strength: "90" },
+      { lang: "Firebase", strength: "60" },
+      { lang: "Docker (Basics)", strength: "40" },
+      { lang: "GitHub Actions", strength: "50" },
+
     ],
   },
 ];
