@@ -1,6 +1,6 @@
-import linkdin from "../assets/linkedin.png";
-import github from "../assets/github.png";
-import gmail from "../assets/gmail.png";
+import linkdin from "/assets/linkedin.png";
+import github from "/assets/github.png";
+import gmail from "/assets/gmail.png";
 
 function About() {
   return (
@@ -11,7 +11,7 @@ function About() {
       <div className="flex md:ml-8 sm:w-1/3 flex-col items-center justify-center">
         <img
           className=" m-4 p h-48 w-48 rounded-full hover:shadow-lg hover:border-gray-400 hover:border-2"
-          src="/src/assets/profile.jpeg"
+          src="/assets/profile.jpeg"
           alt="amit"
         />
         <div className="flex gap-2">

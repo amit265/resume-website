@@ -6,7 +6,7 @@ export const projects = [
     techStack: "React",
     url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
     live: "https://play.google.com/store/apps/details?id=com.mindcraftlearning.coderespite",
-    graphicImage: "/src/assets/projects/coderespite.png"
+    graphicImage: "/assets/projects/coderespite.png"
 
 
 
@@ -18,7 +18,7 @@ export const projects = [
     techStack: "React",
     url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
     live: "https://play.google.com/store/apps/details?id=com.mindcraftlearning.questiongames",
-    graphicImage: "/src/assets/projects/questiongames.png"
+    graphicImage: "/assets/projects/questiongames.png"
 
   },
   {
@@ -28,7 +28,7 @@ export const projects = [
     techStack: "React",
     url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
     live: "https://play.google.com/store/apps/details?id=com.mindcraftlearning.spinthewheel",
-    graphicImage: "/src/assets/projects/spinthewheel.png"
+    graphicImage: "/assets/projects/spinthewheel.png"
 
   },
   {
@@ -38,7 +38,7 @@ export const projects = [
     techStack: "React",
     url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
     live: "https://play.google.com/store/apps/details?id=com.coderespite.triviaquestai",
-    graphicImage: "/src/assets/projects/trivia.png"
+    graphicImage: "/assets/projects/trivia.png"
 
   },
 
@@ -49,7 +49,7 @@ export const projects = [
     techStack: "React, Redux, TMDB API, OpenAI API, Firebase Authentication",
     url: "https://github.com/amit265/React-Projects/tree/main/netflixgpt",
     live: "https://coderespite.com/projects/react/netflixgpt",
-    graphicImage: "/src/assets/projects/netflixgpt.png"
+    graphicImage: "/assets/projects/netflixgpt.png"
   },
   {
     title: "Swiggy App",
@@ -58,7 +58,7 @@ export const projects = [
     techStack: "React, Swiggy API, Redux, Custom Hooks",
     url: "https://github.com/amit265/React-Projects/tree/main/swiggy-app",
     live: "https://coderespite.com/projects/react/swiggy/",
-    graphicImage: "/src/assets/projects/swiggy.png"
+    graphicImage: "/assets/projects/swiggy.png"
 
   },
   {
@@ -68,7 +68,7 @@ export const projects = [
     techStack: "React, Blog API",
     url: "https://github.com/amit265/React-Projects/tree/main/blog-app",
     live: "https://coderespite.com/projects/react/blog-app/",
-    graphicImage: "/src/assets/projects/netflixgpt.png"
+    graphicImage: "/assets/projects/netflixgpt.png"
 
   },
   
@@ -79,21 +79,21 @@ export const certificates = [
     title: "Namaste React",
     org: "Akshay Saini",
     cert_link: "https://coderespite.com/image/react.jpg",
-    cert_pic: "/src/assets/certificates/react.jpg",
+    cert_pic: "/assets/certificates/react.jpg",
   },
   {
     title: "Responsive Web Design",
     org: "freeCodeCamp.org",
     cert_link:
       "https://www.freecodecamp.org/certification/amit265/responsive-web-design",
-    cert_pic: "/src/assets/certificates/responsive_web_design.png",
+    cert_pic: "/assets/certificates/responsive_web_design.png",
   },
   {
     title: "JavaScript Algorithms and Data Structures",
     org: "freeCodeCamp.org",
     cert_link:
       "https://www.freecodecamp.org/certification/amit265/javascript-algorithms-and-data-structures-v8",
-    cert_pic: "/src/assets/certificates/javascript.png",
+    cert_pic: "/assets/certificates/javascript.png",
   },
 ];
 
@@ -136,26 +136,26 @@ export const quotes = [
   {
     text: "Your most unhappy customers are your greatest source of learning.",
     author: "Bill Gates",
-    image: "/src/assets/quotes/bill-gates.jpg",
+    image: "/assets/quotes/bill-gates.jpg",
   },
   {
     text: "Talk is cheap. Show me the code.",
     author: "Linus Torvalds",
-    image: "/src/assets/quotes/linus-torvalds.jpg",
+    image: "/assets/quotes/linus-torvalds.jpg",
   },
   {
     text: "Innovation distinguishes between a leader and a follower.",
     author: "Steve Jobs",
-    image: "/src/assets/quotes/steve-jobs.jpg",
+    image: "/assets/quotes/steve-jobs.jpg",
   },
   {
     text: "The best way to find yourself is to lose yourself in the service of others.",
     author: "Mahatma Gandhi",
-    image: "/src/assets/quotes/gandhi.jpg",
+    image: "/assets/quotes/gandhi.jpg",
   },
   {
     text: "Happiness is not something ready-made. It comes from your own actions.",
     author: "Dalai Lama",
-    image: "/src/assets/quotes/dalai_lama.jpg",
+    image: "/assets/quotes/dalai_lama.jpg",
   },
 ];
