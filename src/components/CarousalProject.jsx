@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-
-
-const Carousel = ({projects}) => {
+const Carousel = ({ projects }) => {
   console.log(projects);
   const [current, setCurrent] = useState(0);
 
@@ -20,45 +18,49 @@ const Carousel = ({projects}) => {
       <div className="static">
         <div className="relative w-full max-w-4xl mx-auto sm:my-8">
           <div>
-          <button
-            onClick={prevSlide}
-            className="absolute z-10 left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
-          >
-            <FaArrowLeft />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 z-10 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
-          >
-            <FaArrowRight />
-          </button>
+            <button
+              onClick={prevSlide}
+              className="absolute z-10 left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+            >
+              <FaArrowLeft />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 z-10 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+            >
+              <FaArrowRight />
+            </button>
           </div>
           {projects
             .filter((_, index) => index === current)
             .map((project, index) => (
               <div key={index} className="p-4">
                 <div className=" bg-white text-[#323954] shadow-lg rounded-lg p-4">
-                  <div className="flex flex-row gap-4">
-                    <h3 className="text-2xl font-semibold py-1">{project.title}</h3>
-                    <a
-                      href={project.iframeSrc}
-                      target="_blank"
-                      className="font-bold text-lg h-full text-[#fefffa] cursor-pointer px-4 py-2 rounded-md bg-[#ea5147] hover:bg-[#323954]"
-                    >
-                      live
-                    </a>
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      className="font-bold text-lg h-full text-[#fefffa] cursor-pointer px-4 py-2 rounded-md bg-[#ea5147] hover:bg-[#323954]"
-                    >
-                      code
-                    </a>
+                  <div className="flex flex-row gap-4 justify-between">
+                    <h3 className="text-2xl font-semibold py-1">
+                      {project.title}
+                    </h3>
+                    <div className="flex gap-x-2 justify-center items-start">
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        className="font-bold text-lg text-[#fefffa] cursor-pointer px-4 py-2 rounded-md bg-[#ea5147] hover:bg-[#323954]"
+                      >
+                        live
+                      </a>
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        className="font-bold text-lg text-[#fefffa] cursor-pointer px-4 py-2 rounded-md bg-[#ea5147] hover:bg-[#323954]"
+                      >
+                        code
+                      </a>
+                    </div>
                   </div>
-                  <iframe
-                    src={project.iframeSrc}
+                  <img
+                    src={project.graphicImage}
+                    alt={project.title}
                     className="w-full mx-auto h-96 border-0 rounded-lg mt-4"
-                    title={project.title}
                   />
                   <p className="text-lg mt-4 p-4 text-wrap">
                     {project.description}

@@ -1,11 +1,55 @@
 export const projects = [
   {
+    title: "CodeRespite: Refresh Your Tech Skills",
+    description:
+      "Code Respite is your go-to destination for mastering full stack web development. Explore tutorials, projects, and insightful blogs on HTML, CSS, JavaScript, React, Node.js, and more.",
+    techStack: "React",
+    url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
+    live: "https://play.google.com/store/apps/details?id=com.mindcraftlearning.coderespite",
+    graphicImage: "/src/assets/projects/coderespite.png"
+
+
+
+  },
+  {
+    title: "Question Games: Get to Know Me",
+    description:
+      "Code Respite is your go-to destination for mastering full stack web development. Explore tutorials, projects, and insightful blogs on HTML, CSS, JavaScript, React, Node.js, and more.",
+    techStack: "React",
+    url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
+    live: "https://play.google.com/store/apps/details?id=com.mindcraftlearning.questiongames",
+    graphicImage: "/src/assets/projects/questiongames.png"
+
+  },
+  {
+    title: "Spin the Wheel : Pick for me",
+    description:
+      "Code Respite is your go-to destination for mastering full stack web development. Explore tutorials, projects, and insightful blogs on HTML, CSS, JavaScript, React, Node.js, and more.",
+    techStack: "React",
+    url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
+    live: "https://play.google.com/store/apps/details?id=com.mindcraftlearning.spinthewheel",
+    graphicImage: "/src/assets/projects/spinthewheel.png"
+
+  },
+  {
+    title: "Trivia Quest AI: Fun Quiz Game",
+    description:
+      "Code Respite is your go-to destination for mastering full stack web development. Explore tutorials, projects, and insightful blogs on HTML, CSS, JavaScript, React, Node.js, and more.",
+    techStack: "React",
+    url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
+    live: "https://play.google.com/store/apps/details?id=com.coderespite.triviaquestai",
+    graphicImage: "/src/assets/projects/trivia.png"
+
+  },
+
+  {
     title: "NetflixGPT",
     description:
       "A comprehensive movie searching and browsing application with features like user authentication, movie search using TMDB API, movie recommendations (OpenAI API integration), and more.",
     techStack: "React, Redux, TMDB API, OpenAI API, Firebase Authentication",
     url: "https://github.com/amit265/React-Projects/tree/main/netflixgpt",
-    iframeSrc: "https://coderespite.com/projects/react/netflixgpt",
+    live: "https://coderespite.com/projects/react/netflixgpt",
+    graphicImage: "/src/assets/projects/netflixgpt.png"
   },
   {
     title: "Swiggy App",
@@ -13,7 +57,9 @@ export const projects = [
       "An app where you can order foods. Data is fetched through the Swiggy API, and Redux is used to store items in the cart. It also uses custom hooks for state management.",
     techStack: "React, Swiggy API, Redux, Custom Hooks",
     url: "https://github.com/amit265/React-Projects/tree/main/swiggy-app",
-    iframeSrc: "https://coderespite.com/projects/react/swiggy/",
+    live: "https://coderespite.com/projects/react/swiggy/",
+    graphicImage: "/src/assets/projects/swiggy.png"
+
   },
   {
     title: "Blog App",
@@ -21,16 +67,11 @@ export const projects = [
       "A blog application that fetches all blog posts through an API. It categorically organizes the posts and provides options for more pages. CRUD operations are not included.",
     techStack: "React, Blog API",
     url: "https://github.com/amit265/React-Projects/tree/main/blog-app",
-    iframeSrc: "https://coderespite.com/projects/react/blog-app/",
+    live: "https://coderespite.com/projects/react/blog-app/",
+    graphicImage: "/src/assets/projects/netflixgpt.png"
+
   },
-  {
-    title: "coderespite.com",
-    description:
-      "Code Respite is your go-to destination for mastering full stack web development. Explore tutorials, projects, and insightful blogs on HTML, CSS, JavaScript, React, Node.js, and more.",
-    techStack: "React",
-    url: "https://github.com/amit265/React-Projects/tree/main/coderespite.com",
-    iframeSrc: "https://coderespite.com/",
-  },
+  
 ];
 
 export const certificates = [
@@ -38,21 +79,21 @@ export const certificates = [
     title: "Namaste React",
     org: "Akshay Saini",
     cert_link: "https://coderespite.com/image/react.jpg",
-    cert_pic: "https://coderespite.com/image/react.jpg",
+    cert_pic: "/src/assets/certificates/react.jpg",
   },
   {
     title: "Responsive Web Design",
     org: "freeCodeCamp.org",
     cert_link:
       "https://www.freecodecamp.org/certification/amit265/responsive-web-design",
-    cert_pic: "https://coderespite.com/image/responsive_web_design.png",
+    cert_pic: "/src/assets/certificates/responsive_web_design.png",
   },
   {
     title: "JavaScript Algorithms and Data Structures",
     org: "freeCodeCamp.org",
     cert_link:
       "https://www.freecodecamp.org/certification/amit265/javascript-algorithms-and-data-structures-v8",
-    cert_pic: "https://coderespite.com/image/javascript.png",
+    cert_pic: "/src/assets/certificates/javascript.png",
   },
 ];
 
@@ -95,26 +136,26 @@ export const quotes = [
   {
     text: "Your most unhappy customers are your greatest source of learning.",
     author: "Bill Gates",
-    image: "https://coderespite.com/image/bill-gates.jpg",
+    image: "/src/assets/quotes/bill-gates.jpg",
   },
   {
     text: "Talk is cheap. Show me the code.",
     author: "Linus Torvalds",
-    image: "https://coderespite.com/image/linus-torvalds.jpg",
+    image: "/src/assets/quotes/linus-torvalds.jpg",
   },
   {
     text: "Innovation distinguishes between a leader and a follower.",
     author: "Steve Jobs",
-    image: "https://coderespite.com/image/steve-jobs.jpg",
+    image: "/src/assets/quotes/steve-jobs.jpg",
   },
   {
     text: "The best way to find yourself is to lose yourself in the service of others.",
     author: "Mahatma Gandhi",
-    image: "https://coderespite.com/image/gandhi.jpg",
+    image: "/src/assets/quotes/gandhi.jpg",
   },
   {
     text: "Happiness is not something ready-made. It comes from your own actions.",
     author: "Dalai Lama",
-    image: "https://coderespite.com/image/dalai-lama.jpg",
+    image: "/src/assets/quotes/dalai_lama.jpg",
   },
 ];
