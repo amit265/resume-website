@@ -5,7 +5,7 @@ import Hamburger from "hamburger-react";
 function Header() {
   const phrases = [
     "Web Developer.",
-    "Full Stack Developer.",
+    "React Native Developer.",
     "Mobile App Developer.",
   ];
 

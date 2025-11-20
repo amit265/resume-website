@@ -52,14 +52,10 @@ function About() {
         </h2>
 
         <p className=" mx-auto text-base sm:text-lg px-2 text-justify pt-4">
-          Hi, I'm Amit, a passionate web developer with a knack for bringing
-          creative ideas to life. With a background in Computer Science and a
-          diverse skill set, I thrive on tackling exciting projects and
-          collaborating with innovative minds. Let's connect and explore how we
-          can create something amazing together!
+          Hi, I&apos;m Amit - a developer who enjoys building clean, functional products that people can actually use. I work mainly with React Native, React, and Android, and I like turning simple ideas into polished, working apps. I&apos;m always experimenting, learning, and building, and I enjoy working with people who value practical problem-solving and thoughtful design.
         </p>
         <p className=" mx-auto text-base sm:text-lg px-2 text-start pt-4">
-          Feel free to check out my work, and connect with me on LinkedIn. I'm
+          Feel free to check out my work, and connect with me on LinkedIn. I&apos;m
           always ready for new challenges and opportunities.
         </p>
       </div>
