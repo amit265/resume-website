@@ -119,7 +119,7 @@ function Header() {
                 className="w-24 ml-auto mr-4 mt-2 cursor-pointer px-4 py-2 rounded-md bg-[#ea5147] hover:bg-[#fefffa] hover:text-[#323954]"
               >
                 <a
-                  href="/assets/amit-resume.pdf"
+                  href="/public/assets/Amit-Kumar-React-Native-Developer.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
