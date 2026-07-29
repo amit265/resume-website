@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, Github, ZoomIn } from "lucide-react";
 import { FiGithub } from "react-icons/fi";
 import { TrackedLink } from "./tracked-link";
 import { DeviceMockup } from "./device-mockup";
@@ -86,28 +86,42 @@ export function ProjectCard({ project, compact = false }) {
       <div className="flex flex-col lg:flex-row gap-12 items-center">
         {/* Mockup Side */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-          <div className="relative">
+          <div className="relative group cursor-zoom-in">
             {/* Soft glowing background effect behind the phone */}
-            <div className="absolute inset-0 bg-accent/20 blur-[80px] rounded-full" />
+            <div className="absolute inset-0 bg-accent/20 blur-[80px] rounded-full group-hover:bg-accent/40 transition-colors duration-500" />
             
             {project.screenshots?.length ? (
-              <DeviceMockup>
-                <Image
-                  src={project.screenshots[0]}
-                  alt={`${project.title} screenshot`}
-                  width={280}
-                  height={560}
-                  className="w-full h-full object-cover"
-                />
-              </DeviceMockup>
+              <div className="relative">
+                <DeviceMockup>
+                  <Image
+                    src={project.screenshots[0]}
+                    alt={`${project.title} screenshot`}
+                    width={280}
+                    height={560}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </DeviceMockup>
+                {/* Zoom Overlay */}
+                <div className="absolute inset-0 bg-background/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center z-20 rounded-[2rem]">
+                  <div className="bg-surface/80 p-4 rounded-full shadow-2xl translate-y-4 group-hover:translate-y-0 transition-all duration-500 border border-border">
+                    <ZoomIn className="w-6 h-6 text-primary" />
+                  </div>
+                </div>
+              </div>
             ) : (
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                 <Image
                   src={project.graphicImage}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
+                {/* Zoom Overlay */}
+                <div className="absolute inset-0 bg-background/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center z-20">
+                  <div className="bg-surface/80 p-4 rounded-full shadow-2xl translate-y-4 group-hover:translate-y-0 transition-all duration-500 border border-border">
+                    <ZoomIn className="w-6 h-6 text-primary" />
+                  </div>
+                </div>
               </div>
             )}
           </div>

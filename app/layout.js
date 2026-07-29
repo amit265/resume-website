@@ -50,7 +50,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/assets/profile.jpeg",
+        url: "/assets/profile.png",
         width: 1200,
         height: 630,
         alt: "Amit Kumar profile photo",
@@ -61,16 +61,16 @@ export const metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/assets/profile.jpeg"],
+    images: ["/assets/profile.png"],
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: "/favicon.png?v=2",
-    shortcut: "/favicon.png?v=2",
-    apple: "/favicon.png?v=2",
+    icon: "/favicon.png?v=3",
+    shortcut: "/favicon.png?v=3",
+    apple: "/favicon.png?v=3",
   },
 };
 

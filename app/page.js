@@ -27,15 +27,15 @@ export default function HomePage() {
       <SiteNav activePath="/" />
 
       {/* Hero Section */}
-      <header className="pt-48 pb-32 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16" id="home">
-        <div className="flex-1 flex flex-col items-start fade-in-up">
+      <header className="pt-48 pb-32 px-6 max-w-5xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12 lg:gap-20" id="home">
+        <div className="flex flex-col items-start max-w-xl fade-in-up">
           <Badge variant="outline" className="mb-8 px-4 py-2 text-sm border-white/10 bg-white/5">
             <MapPin className="w-4 h-4 mr-2 text-secondary" />
             {personalInfo.location}
           </Badge>
           
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[1.1]">
-            Hi, I'm <span className="text-accent">Amit.</span>
+            Hi, I'm Amit<span className="text-accent">.</span>
           </h1>
           
           <h2 className="text-2xl md:text-3xl text-secondary font-medium mb-6 leading-relaxed max-w-2xl">
@@ -66,14 +66,14 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="w-full lg:w-[480px] relative fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <div className="absolute inset-0 bg-accent/20 blur-[100px] rounded-full mix-blend-screen" />
-          <div className="relative aspect-square rounded-[3rem] overflow-hidden border border-border shadow-hero bg-surface p-2">
+        <div className="w-full lg:w-[320px] relative fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="absolute inset-0 bg-accent/20 blur-[80px] rounded-full mix-blend-screen" />
+          <div className="relative aspect-square rounded-full overflow-hidden border border-border shadow-hero bg-surface p-2">
             <Image
-              src="/assets/profile.jpeg"
+              src="/assets/profile.png"
               alt="Amit Kumar"
               fill
-              className="object-cover rounded-[2.5rem]"
+              className="object-cover rounded-full"
               priority
             />
           </div>
