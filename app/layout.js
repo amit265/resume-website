@@ -1,7 +1,21 @@
 import "./globals.css";
 import Script from "next/script";
+import { ThemeProvider } from "../components/theme-provider";
+import { Inter, Geist_Mono } from "next/font/google";
 import { JsonLd } from "../components/json-ld";
 import { gaMeasurementId, siteConfig, siteUrl } from "../lib/site-config";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-geist-mono",
+});
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -14,6 +28,13 @@ export const metadata = {
     "Firebase developer",
     "React Native India",
     "LLM mobile integration",
+    "Independent Android Developer India",
+    "React Native product engineer",
+    "Firebase Realtime Database",
+    "Destya Studio Developer",
+    "BPSC to React Native",
+    "Cross-Platform Mobile Engineer",
+    "Expo Developer",
   ],
   authors: [{ name: "Amit Kumar" }],
   creator: "Amit Kumar",
@@ -46,27 +67,33 @@ export const metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: "/favicon.png?v=2",
+    shortcut: "/favicon.png?v=2",
+    apple: "/favicon.png?v=2",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        <JsonLd />
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
-            gtag('js', new Date());
-            gtag('config', '${gaMeasurementId}');
-          `}
-        </Script>
-        {children}
+    <html lang="en" className={`${inter.variable} ${geistMono.variable} scroll-smooth`}>
+      <body className="antialiased selection:bg-accent/30 selection:text-white transition-colors duration-300">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <JsonLd />
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gaMeasurementId}');
+            `}
+          </Script>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
