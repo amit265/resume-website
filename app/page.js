@@ -27,7 +27,7 @@ export default function HomePage() {
       <SiteNav activePath="/" />
 
       {/* Hero Section */}
-      <header className="pt-48 pb-32 px-6 max-w-5xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12 lg:gap-20" id="home">
+      <header className="pt-24 md:pt-32 pb-32 px-6 max-w-5xl mx-auto flex flex-col-reverse lg:flex-row-reverse items-center justify-between gap-12 lg:gap-20" id="home">
         <div className="flex flex-col items-start max-w-xl fade-in-up">
           <Badge variant="outline" className="mb-8 px-4 py-2 text-sm border-white/10 bg-white/5">
             <MapPin className="w-4 h-4 mr-2 text-secondary" />
@@ -66,7 +66,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="w-full lg:w-[320px] relative fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <div className="w-48 md:w-64 lg:w-[320px] relative fade-in-up mx-auto lg:mx-0" style={{ animationDelay: '0.2s' }}>
           <div className="absolute inset-0 bg-accent/20 blur-[80px] rounded-full mix-blend-screen" />
           <div className="relative aspect-square rounded-full overflow-hidden border border-border shadow-hero bg-surface p-2">
             <Image
@@ -92,64 +92,70 @@ export default function HomePage() {
         </div>
       </section>
 
-      <main className="max-w-7xl mx-auto px-6 py-32 flex flex-col gap-32">
+      <main className="flex flex-col">
         {/* Featured Products */}
-        <section id="projects">
-          <SectionHeading
-            eyebrow="Featured Work"
-            title="Production Engineering"
-            copy="Mobile and web applications engineered for scale, performance, and high user retention."
-          />
-          <div className="mt-12 flex flex-col gap-24">
-            {featuredProjects.map((project) => (
-              <ProjectCard project={project} key={project.slug} />
-            ))}
+        <section id="projects" className="py-24 md:py-32">
+          <div className="max-w-7xl mx-auto px-6">
+            <SectionHeading
+              eyebrow="Featured Work"
+              title="Production Engineering"
+              copy="Mobile and web applications engineered for scale, performance, and high user retention."
+            />
+            <div className="mt-12 flex flex-col gap-24">
+              {featuredProjects.map((project) => (
+                <ProjectCard project={project} key={project.slug} />
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Professional Journey */}
-        <section id="experience">
-          <SectionHeading
-            eyebrow="Career"
-            title="Professional Journey"
-            copy="From scaling independent Android apps to leading mobile teams at Destya Studio."
-          />
-          <div className="mt-12">
-            <ExperienceTimeline experience={experience} />
+        <section id="experience" className="py-24 md:py-32 bg-surface/30 border-y border-border/50">
+          <div className="max-w-7xl mx-auto px-6">
+            <SectionHeading
+              eyebrow="Career"
+              title="Professional Journey"
+              copy="From scaling independent Android apps to leading mobile teams at Destya Studio."
+            />
+            <div className="mt-12">
+              <ExperienceTimeline experience={experience} />
+            </div>
           </div>
         </section>
 
         {/* Studio Notes Preview */}
-        <section id="notes">
-          <SectionHeading
-            eyebrow="Writing"
-            title="Studio Notes"
-            copy="Observations on design, engineering, and digital artifacts from my journal."
-          />
-          <div className="mt-12 flex items-stretch gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 px-2 -mx-2">
-            {externalArticles.slice(0, 3).map((article, i) => (
-              <a 
-                key={i} 
-                href={article.url}
-                target="_blank"
-                rel="noreferrer"
-                className="group p-8 rounded-3xl bg-surface border border-border hover:border-border/80 hover:bg-surface/80 transition-colors flex flex-col min-w-[300px] md:min-w-[380px] snap-center hover-lift"
-              >
-                <div className="flex justify-between items-start mb-6">
-                  <Badge variant="outline">{article.date}</Badge>
-                  <ArrowUpRight className="w-5 h-5 text-secondary group-hover:text-primary transition-colors" />
-                </div>
-                <h3 className="text-xl font-bold mb-4 group-hover:text-accent transition-colors">{article.title}</h3>
-                <p className="text-secondary text-sm leading-relaxed flex-1">{article.description}</p>
+        <section id="notes" className="py-24 md:py-32">
+          <div className="max-w-7xl mx-auto px-6">
+            <SectionHeading
+              eyebrow="Writing"
+              title="Studio Notes"
+              copy="Observations on design, engineering, and digital artifacts from my journal."
+            />
+            <div className="mt-12 flex items-stretch gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 px-2 -mx-2">
+              {externalArticles.slice(0, 3).map((article, i) => (
+                <a 
+                  key={i} 
+                  href={article.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group p-8 rounded-3xl bg-surface border border-border hover:border-border/80 hover:bg-surface/80 transition-colors flex flex-col min-w-[300px] md:min-w-[380px] snap-center hover-lift"
+                >
+                  <div className="flex justify-between items-start mb-6">
+                    <Badge variant="outline">{article.date}</Badge>
+                    <ArrowUpRight className="w-5 h-5 text-secondary group-hover:text-primary transition-colors" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 group-hover:text-accent transition-colors">{article.title}</h3>
+                  <p className="text-secondary text-sm leading-relaxed flex-1">{article.description}</p>
+                </a>
+              ))}
+            </div>
+            <div className="mt-12 flex justify-center">
+              <a href="https://destyastudio.com/journal" target="_blank" rel="noreferrer">
+                <Button variant="secondary" size="lg">
+                  View All Notes <ArrowUpRight className="w-4 h-4 ml-2" />
+                </Button>
               </a>
-            ))}
-          </div>
-          <div className="mt-12 flex justify-center">
-            <a href="https://destyastudio.com/journal" target="_blank" rel="noreferrer">
-              <Button variant="secondary" size="lg">
-                View All Notes <ArrowUpRight className="w-4 h-4 ml-2" />
-              </Button>
-            </a>
+            </div>
           </div>
         </section>
       </main>
