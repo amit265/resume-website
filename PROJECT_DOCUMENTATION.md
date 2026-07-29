@@ -32,10 +32,14 @@ The project follows a standard Next.js App Router structure with a clear separat
 │   ├── robots.js              # Generates robots.txt dynamically
 │   └── sitemap.js             # Generates sitemap.xml dynamically
 ├── components/                # Reusable React UI Components
+│   ├── device-mockup.js       # Renders a sleek phone/device frame around images
+│   ├── experience-timeline.js # Alternating timeline component for work history
+│   ├── floating-contact.js    # Global floating action button for contact
 │   ├── json-ld.js             # Injects Schema.org structured data
-│   ├── project-card.js        # Renders individual project summaries & metrics
-│   ├── section-heading.js     # Standardized section titles with eyebrows
+│   ├── project-card.js        # Renders individual project summaries with zoom interactions
+│   ├── section-heading.js     # Standardized section titles with micro-branding sparks
 │   ├── site-nav.js            # Global navigation bar
+│   ├── theme-toggle.js        # Animated sun/moon dark mode switcher
 │   └── tracked-link.js        # Custom Link wrapper that fires Google Analytics events
 ├── lib/                       # Core Logic, Configuration, and Data Store
 │   ├── analytics.js           # Google Analytics event dispatchers
@@ -59,9 +63,11 @@ The project follows a standard Next.js App Router structure with a clear separat
 The UI is built modularly. Here are the key components and their roles:
 
 *   **`TrackedLink`** (`tracked-link.js`): A highly important wrapper around the standard HTML `<a>` or Next.js `<Link>`. It automatically fires `gtag` events to Google Analytics whenever a user clicks the link. Used for tracking external links, resume downloads, and social profile clicks.
-*   **`ProjectCard`** (`project-card.js`): Renders a single project on the homepage. It supports a full view (with impact metrics and screenshot galleries) and a "compact" view for secondary projects. It intelligently renders a "Play Store Badge" if the project's live URL is on Google Play.
-*   **`SectionHeading`** (`section-heading.js`): A purely presentational component that ensures all sections (e.g., "About", "Experience", "Projects") have a consistent layout (Eyebrow text, Title, and optional copy).
-*   **`SiteNav`** (`site-nav.js`): The top navigation bar, highlighting the active path.
+*   **`ProjectCard`** (`project-card.js`): Renders a single project on the homepage. It supports a full view (with impact metrics, device mockups, and interactive hover zoom) and a "compact" view for secondary projects. It intelligently renders a "Play Store Badge" if the project's live URL is on Google Play.
+*   **`SectionHeading`** (`section-heading.js`): Ensures all sections (e.g., "About", "Experience", "Projects") have a consistent layout (Eyebrow text, Title, and optional copy). Includes an animated glowing spark (`✦`) for premium micro-branding.
+*   **`ThemeToggle`** (`theme-toggle.js`): An absolute-positioned, animated component that smoothly rotates and scales Sun/Moon icons when toggling between dark and light modes.
+*   **`FloatingContact`** (`floating-contact.js`): A persistent, globally available floating action button anchored to the bottom right of the screen to drive contact conversions.
+*   **`SiteNav`** (`site-nav.js`): The top navigation bar, highlighting the active path and housing the theme toggle.
 *   **`JsonLd`** (`json-ld.js`): Renders a `<script type="application/ld+json">` tag to inject structured data into the DOM, making the site highly readable for search engines.
 
 ## 4. Data Management (`lib/`)

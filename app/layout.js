@@ -4,6 +4,7 @@ import { ThemeProvider } from "../components/theme-provider";
 import { Inter, Geist_Mono } from "next/font/google";
 import { JsonLd } from "../components/json-ld";
 import { gaMeasurementId, siteConfig, siteUrl } from "../lib/site-config";
+import { FloatingContact } from "../components/floating-contact";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -93,6 +94,7 @@ export default function RootLayout({ children }) {
             `}
           </Script>
           {children}
+          <FloatingContact />
         </ThemeProvider>
       </body>
     </html>

@@ -21,18 +21,6 @@ export function SiteFooter() {
               I'm always thrilled to dive into exciting projects. Let's connect and explore how we can collaborate!
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 mt-4">
-              <TrackedLink href={`mailto:${personalInfo.email}`} eventName="email_click" eventLabel="Email footer CTA">
-                <Button variant="primary" size="lg" className="h-14 px-8 text-lg rounded-2xl group hover-lift shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] transition-all">
-                  <Mail className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" /> Email Me
-                </Button>
-              </TrackedLink>
-              <TrackedLink href={personalInfo.resumeUrl} eventName="resume_download_click" eventLabel="Download resume footer CTA" target="_blank" rel="noreferrer">
-                <Button variant="secondary" size="lg" className="h-14 px-8 text-lg rounded-2xl bg-surface hover-lift group">
-                  <Download className="w-5 h-5 mr-3 group-hover:-translate-y-1 transition-transform duration-300" /> Resume
-                </Button>
-              </TrackedLink>
-            </div>
           </div>
 
           {/* Right Column: Contact Form */}
