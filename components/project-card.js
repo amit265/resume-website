@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Github, ZoomIn } from "lucide-react";
+import { useState } from "react";
+import { ArrowUpRight, ZoomIn, Eye } from "lucide-react";
 import { FiGithub } from "react-icons/fi";
 import { TrackedLink } from "./tracked-link";
+import { QuickViewModal } from "./quick-view-modal";
 import { DeviceMockup } from "./device-mockup";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
@@ -54,6 +58,7 @@ export function ScreenshotGallery({ screenshots, title }) {
 
 export function ProjectCard({ project, compact = false }) {
   const isPlayStore = project.live?.includes("play.google.com");
+  const [showQuickView, setShowQuickView] = useState(false);
 
   if (compact) {
     return (
@@ -152,13 +157,7 @@ export function ProjectCard({ project, compact = false }) {
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            {project.hasCaseStudy && (
-              <Link href={`/projects/${project.slug}`}>
-                <Button variant="primary">
-                  Read Case Study <ArrowUpRight className="w-4 h-4" />
-                </Button>
-              </Link>
-            )}
+
             
             {project.live && (
               isPlayStore ? (
@@ -177,6 +176,27 @@ export function ProjectCard({ project, compact = false }) {
                   </Button>
                 </TrackedLink>
               )
+            )}
+
+            {project.quickView && (
+              <>
+                <Button 
+                  variant="secondary" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setShowQuickView(true);
+                  }}
+                  className="cursor-pointer hover-lift"
+                >
+                  <Eye className="w-4 h-4 mr-2" /> Quick View
+                </Button>
+                {showQuickView && (
+                  <QuickViewModal 
+                    url={project.quickView} 
+                    onClose={() => setShowQuickView(false)} 
+                  />
+                )}
+              </>
             )}
 
             {project.url && (
